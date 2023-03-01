@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Supers
+from .models import Song
 
 
-class SuperSerializer(serializers.ModelSerializer):
+class SongSerializer(serializers.ModelSerializer):
     class Meta:
-        model = song
+        model = Song
         fields = ['id','title','artist','album','release_date','genre']
         depth = 1
         # super_type = serializers.IntegerField(write_only=True)
